@@ -1,6 +1,7 @@
 package com.mt.spring.advanced.springadvanced.payloads;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.mt.spring.advanced.springadvanced.configs.JsonConfigs.MySerializer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

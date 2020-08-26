@@ -22,9 +22,9 @@ public class SpringAdvancedApplication {
 	public static List<Customer> customers = new ArrayList<>();
 	
 	static {
-		employees.add(new Employee(new Person("MT",23,Calendar.DAY_OF_MONTH,new Salary(2000)),new Address("124234FE","New York")));
-		employees.add(new Employee(new Person("NT",67,Calendar.DAY_OF_MONTH,new Salary(3500)),new Address("45345gg","Dallas")));
-		employees.add(new Employee(new Person("GT",54,Calendar.DAY_OF_MONTH,new Salary(6000)),new Address("34543645","Sacramento")));
+		employees.add(new Employee(new Person("MT",23,Calendar.DAY_OF_MONTH,new Salary(2000)),new Address("124234FE","New York"),false));
+		employees.add(new Employee(new Person("NT",67,Calendar.DAY_OF_MONTH,new Salary(3500)),new Address("45345gg","Dallas"),true));
+		employees.add(new Employee(new Person("GT",54,Calendar.DAY_OF_MONTH,new Salary(6000)),new Address("34543645","Sacramento"),false));
 
 		students.add(new Student(new Person("Jimmy",6,Calendar.DAY_OF_MONTH,new Salary(1000)),new Address("124234FE","New York"),1));
 		students.add(new Student(new Person("Jinny",12,Calendar.DAY_OF_MONTH,new Salary(1500)),new Address("124234FE","New York"),6));

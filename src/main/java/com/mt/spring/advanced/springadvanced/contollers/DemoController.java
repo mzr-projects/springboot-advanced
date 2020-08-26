@@ -2,7 +2,9 @@ package com.mt.spring.advanced.springadvanced.contollers;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.mt.spring.advanced.springadvanced.SpringAdvancedApplication;
+import com.mt.spring.advanced.springadvanced.configs.JsonConfigs.SecretView;
 import com.mt.spring.advanced.springadvanced.payloads.Customer;
 import com.mt.spring.advanced.springadvanced.payloads.Employee;
 import com.mt.spring.advanced.springadvanced.payloads.Student;
@@ -24,6 +26,12 @@ public class DemoController {
 
     @GetMapping("/employees")
     public ResponseEntity<List<Employee>> getEmployee(){
+        return new ResponseEntity<>(SpringAdvancedApplication.employees,HttpStatus.OK);
+    }
+
+    @GetMapping("/employees2")
+    @JsonView(SecretView.class)
+    public ResponseEntity<List<Employee>> getEmployee2(){
         return new ResponseEntity<>(SpringAdvancedApplication.employees,HttpStatus.OK);
     }
 
